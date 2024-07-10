@@ -38,3 +38,21 @@ export const createProduct = async (req, res) => {
         res.status(400).json({message: error.message});
     }
 }
+
+export const updateProduct = async (req, res) => {
+    const {name, price} = req.body;
+    try {
+        const product = await prisma.product.update({
+            where: {
+                id: Number(req.params.id)
+            },
+            data: {
+                name: name,
+                price: price
+            }
+        });
+        res.status(200).json(product);
+    } catch (error) {
+        res.status(400).json({message: error.message});
+    }
+}
