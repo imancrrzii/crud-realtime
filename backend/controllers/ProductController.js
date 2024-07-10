@@ -23,3 +23,18 @@ export const getProductById = async (req, res) => {
         res.status(404).json({message: error.message});
     }
 }
+
+export const createProduct = async (req, res) => {
+    const {name, price} = req.body;
+    try {
+        const product = await prisma.product.create({
+            data: {
+                name: name,
+                price: price
+            }
+        });
+        res.status(201).json(product);
+    } catch (error) {
+        res.status(400).json({message: error.message});
+    }
+}
