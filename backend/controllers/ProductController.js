@@ -56,3 +56,16 @@ export const updateProduct = async (req, res) => {
         res.status(400).json({message: error.message});
     }
 }
+
+export const deleteProduct = async (req, res) => {
+    try {
+        const product = await prisma.product.delete({
+            where: {
+                id: Number(req.params.id)
+            }
+        });
+        res.status(200).json(product);
+    } catch (error) {
+        res.status(400).json({message: error.message});
+    }
+}

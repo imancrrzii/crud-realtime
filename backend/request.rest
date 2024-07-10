@@ -20,3 +20,6 @@ Content-Type: application/json
     "name": "product1 updated",
     "price": 10001
 }
+
+###
+DELETE http://localhost:5000/products/3
