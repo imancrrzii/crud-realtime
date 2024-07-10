@@ -5,6 +5,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductList from "./components/ProductList";
 import AddProduct from "./components/AddProduct";
+import EditProduct from "./components/EditProduct";
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ProductList />}/>
           <Route path="/create" element={<AddProduct />}/>
+          <Route path="/edit/:id" element={<EditProduct />}/>
         </Routes>
       </BrowserRouter>
     </>
