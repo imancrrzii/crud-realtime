@@ -10,3 +10,16 @@ export const getProducts = async (req, res) => {
         res.status(500).json({message: error.message});
     }
 }
+
+export const getProductById = async (req, res) => {
+    try {
+        const response = await prisma.product.findUnique({
+            where:{
+                id: Number(req.params.id)
+            }
+        });
+        res.status(200).json(response);
+    } catch (error) {
+        res.status(404).json({message: error.message});
+    }
+}
