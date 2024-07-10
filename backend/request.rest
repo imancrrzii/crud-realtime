@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
     "name": "product2",
-    "price": 10000
+    "price": 10006
 }
 
 ###
@@ -22,4 +22,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5000/products/3
+DELETE http://localhost:5000/products/4
