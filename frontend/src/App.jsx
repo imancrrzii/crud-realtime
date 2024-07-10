@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductList from "./components/ProductList";
+import AddProduct from "./components/AddProduct";
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ProductList />}/>
+          <Route path="/create" element={<AddProduct />}/>
         </Routes>
       </BrowserRouter>
     </>

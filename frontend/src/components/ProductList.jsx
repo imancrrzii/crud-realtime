@@ -23,7 +23,7 @@ const ProductList = () => {
       <div className="mx-auto container">
         <Link
           className=" flex items-center gap-x-2 bg-violet-500 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded float-left mb-5 text-sm"
-          to="/add-product"
+          to="/create"
         >
           <FaPlus />
           Add Product
